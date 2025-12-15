@@ -8,7 +8,7 @@ class TodoModel
     public function __construct()
     {
         // Inisialisasi koneksi database PostgreSQL
-        $this->conn = pg_connect('host=' . DB_HOST . ' port=' . DB_PORT . ' dbname=' . DB_NAME . ' user=' . DB_USER . ' password=' . DB_PASSWORD);
+        $this->conn = pg_connect('host=' . DB_HOST . ' port=' . DB_PORT . ' dbname=' . DB_DATABASE . ' user=' . DB_USERNAME . ' password=' . DB_PASSWORD);
         if (!$this->conn) {
             die('Koneksi database gagal');
         }
